@@ -117,7 +117,7 @@ a:hover {
 	-o-transition: all .2s ease-in;
 	transition: all .2s ease-in;
 }
-.main-menu li a:not(:first-child) {
+.main-menu li:not(:first-child) {
 	margin-left: -5px
 }
 .main-menu li a:hover {
@@ -190,7 +190,7 @@ a:hover {
 	background: #F3B100;
 	color: #1A222B;
 }
-.side-image {
+.player-image {
 	width: 100px;
 	height: 100px;
 	background: url(../img/example.jpg) no-repeat center center;
@@ -281,6 +281,7 @@ a:hover {
 }
 .btn-play-steam:hover {
 	background: #FF4C4C;
+	color: #1A222B;
 	box-shadow: 0 5px 0 #DB2424;
 }
 .btn-play-steam:active {
@@ -330,7 +331,7 @@ a:hover {
 	cursor: pointer;
 }
 .game-body {
-	padding: 25px 0;
+	padding: 25px 0 0;
 }
 .game-body ul {
 	list-style: none;
@@ -365,6 +366,9 @@ a:hover {
 	color: #1A222B;
 	padding: 20px 30px;
 	font-size: 24px;
+	box-shadow:
+		10px 0 0 #F3B100,
+	 	-10px 0 0 #F3B100;
 	margin: 0;
 }
 .orange-element a {
@@ -383,4 +387,124 @@ a:hover {
 	-ms-transition: all .2s ease-in;
 	-o-transition: all .2s ease-in;
 	transition: all .2s ease-in;
+}
+.orange-element::after, .orange-element::before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	bottom: -10px;
+}
+.orange-element::after {
+	background: -webkit-linear-gradient(to top left, transparent 50%, #C18D00 50%);
+	background: -moz-linear-gradient(to top left, transparent 50%, #C18D00 50%);
+	background: -ms-linear-gradient(to top left, transparent 50%, #C18D00 50%);
+	background: -o-linear-gradient(to top left, transparent 50%, #C18D00 50%);
+	background: linear-gradient(to top left, transparent 50%, #C18D00 50%);
+	right: -10px;
+}
+.orange-element::before {
+	background: -webkit-linear-gradient(to top right, transparent 50%, #C18D00 50%);
+	background: -moz-linear-gradient(to top right, transparent 50%, #C18D00 50%);
+	background: -ms-linear-gradient(to top right, transparent 50%, #C18D00 50%);
+	background: -o-linear-gradient(to top right, transparent 50%, #C18D00 50%);
+	background: linear-gradient(to top right, transparent 50%, #C18D00 50%);
+	left: -10px;
+}
+.game {
+	margin-top: 0;
+}
+.game .players-list {
+	text-align: center;
+}
+.game .players-list ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.game .players-list ul li {
+	position: relative;
+	display: inline-block;
+}
+.game .players-list ul li span {
+	position: absolute;
+	bottom: 10px;
+	left: 30px;
+	color: #1A222B;
+	background: #F3B100;
+	padding: 5px;
+}
+.game-items {
+	margin: 0;
+	padding: 20px 0;
+	background: #3065ff;
+}
+.game-item div {
+	display: inline-block;
+}
+.game-item {
+	padding: 0;
+	position: relative;
+}
+.game-item .item-info {
+	position: absolute;
+	top: 30px;
+	left: 30%;
+	color: #1A222B;
+	text-align: center;
+}
+.game-item .item-info strong {
+	display: block;
+}
+.game-item .player-image {
+	margin: 0;
+	margin-left: 20px;
+}
+.game-item .item-image {
+	float: right;
+	box-shadow:
+		0 20px 0 rgba(0, 0, 0, 0.2),
+		0 -20px 0 rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2);
+	width: 160px;
+	height: 115px;
+}
+.game-bottom {
+	color: #F3B100;
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.game-bottom i {
+	margin-right: 15px;
+	font-size: 26px;
+}
+.page-footer {
+	padding: 20px 30px;
+	margin: 30px auto;
+	color: #5F6770;
+	font-weight: 400;
+	max-width: 1220px;
+	background: #1A222B;
+}
+.page-footer ul {
+	display: inline-block;
+	float: right;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.page-footer li:not(:last-child) {
+	margin-right: 20px;
+}
+.page-footer li {
+	display: inline-block;
+}
+.page-footer li a {
+	color: #5F6770;
+	text-decoration: underline;
+}
+.page-footer li a:hover {
+	color: #FF4C4C;
 }
