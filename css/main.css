@@ -12,6 +12,11 @@ body, html {
 body {
 	background: #5F6770;
 }
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
 h1 {
 	font-size: 42px;
 }
@@ -23,6 +28,7 @@ h3 {
 }	
 p {
 	font-size: 18px;
+	margin: 0;
 }
 span {
 	color: #F3B100;
@@ -30,6 +36,9 @@ span {
 a {
 	text-decoration: none;
 	color: #DFCECE;
+}
+a:hover {
+	color: #FF4C4C;
 }
 .wrapper {
 	background: #DFCECE;
@@ -77,10 +86,10 @@ a {
 	background: #F3B100;
 	color: #1A222B;
 }
-.buttons li a:focus, .buttons li a:active {
+.buttons li a:active {
 	background: #FF4C4C;
 }
-.buttons li i {
+.buttons li i, .orange-element i {
 	margin-right: 10px;
 }
 .main-menu {
@@ -115,7 +124,7 @@ a {
 	background: #F3B100;
 	color: #1A222B;
 }
-.main-menu li a:focus, .main-menu li a:active {
+.main-menu li a:active {
 	background: #FF4C4C;
 }
 .main-menu .selected-item {
@@ -162,16 +171,19 @@ a {
 }
 .page-content {
 	max-width: 1280px;
-	margin: 35px auto 0;
+	margin: 50px auto 0;
 }
 .sidebar {
 	max-width: 300px;
+	float: left;
 	line-height: 1.4em;
+}
+.side-element:not(:first-child) {
+	margin-top: 35px;
 }
 .side-element {
 	background: #1A222B;
 	padding: 30px;
-	margin-top: 35px;
 	text-align: center;
 }
 .bonus-element {
@@ -213,7 +225,7 @@ a {
 }
 .last-winner-results {
 	border-top: 1px dotted #5F6770;
-	padding: 15px 0;
+	padding: 15px 0 0;
 	text-align: left;
 }
 .last-winner-results ul {
@@ -233,7 +245,142 @@ a {
 	color: #FF4C4C;
 }
 .content {
+	margin-left: 330px;
 }
-
-
-
+.content-element {
+	background: #1A222B;
+	padding: 30px;
+	margin-top: 35px;
+	text-align: left;
+}
+.jackpot-info h1 {
+	display: inline-block;
+}
+.jackpot-info h2 {
+	display: inline-block;
+	background: #F3B100;
+	color: #1A222B;
+	padding: 5px 20px;
+	float: right;
+}
+.btn-play-steam {
+	display: block;
+	background: #F3B100;
+	color: #1A222B;
+	padding: 20px;
+	margin: 25px 0;
+	font-weight: 400;
+	font-size: 22px;
+	box-shadow: 0 5px 0 #C18D00;
+	cursor: pointer;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-ms-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	transition: all .2s ease-in;	
+}
+.btn-play-steam:hover {
+	background: #FF4C4C;
+	box-shadow: 0 5px 0 #DB2424;
+}
+.btn-play-steam:active {
+	background: #FF4C4C;
+	box-shadow: 0 0 10px #DB2424;
+	transform: translateY(5px);
+}
+.game-info {
+	font-size: 14px;
+}
+.daily-stats {
+	display: block;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+.daily-stats li:not(:first-child) {
+	padding-left: 30px;
+}
+.daily-stats li:not(:last-child) {
+	padding-right: 30px;
+	border-right: 1px dotted #5F6770;
+}
+.daily-stats li {
+	display: inline-block;
+	word-wrap: break-word;
+	font-size: 14px;
+}
+.daily-stats li:last-child span {
+	color: #FF4C4C;
+}
+.daily-stats li span {
+	display: block;
+	margin-top: 20px;
+	font-size:44px;
+}
+.daily-stats li i {
+	font-size:30px;
+}
+.game-top {
+	padding-bottom: 25px;
+	border-bottom: 1px dotted #5F6770;
+}
+.sound {
+	float: right;
+	color: #5F6770;
+	cursor: pointer;
+}
+.game-body {
+	padding: 25px 0;
+}
+.game-body ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.game-body ul li {
+	display: inline-block;
+	vertical-align: top;
+}
+.game-body ul li:first-child {
+	margin-right: 40px;
+}
+.progress-bar {
+	background: linear-gradient(to right, #F3B100 2%, #5F6770 2%);
+	color: #1A222B;
+	padding: 20px;
+	margin-top: 20px;
+	font-size: 24px;
+	text-align: center;
+	font-weight: 400;
+	min-width: 450px;
+}
+.time {
+	color: #F3B100;
+	font-size: 44px;
+	margin-top: 25px;
+}
+.orange-element {
+	position: relative;
+	background: #F3B100;
+	color: #1A222B;
+	padding: 20px 30px;
+	font-size: 24px;
+	margin: 0;
+}
+.orange-element a {
+	display: inline-block;
+	position: absolute;
+	right: 30px;
+	top: 15px;
+	width: 150px;
+	text-align: center;
+	background: #1A222B;
+	padding: 10px 20px;
+	font-size: 16px;
+	font-weight: 400;
+	-webkit-transition: all .2s ease-in;
+	-moz-transition: all .2s ease-in;
+	-ms-transition: all .2s ease-in;
+	-o-transition: all .2s ease-in;
+	transition: all .2s ease-in;
+}
